@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="x-icon" href="../img/icon.png">
+    <link rel="shortcut icon" type="x-icon" href="../img/icon.png">
+    <title app-details="name"></title>
+    <link href="../css/Montserrat-300-400-700_Roboto-400-700.css" rel="stylesheet">
+    <link href='../css/style.css' rel='stylesheet' type='text/css'>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <app>
+        <header>
+            <h1 class="title" app-details="name"></h1>
+            <p>
+                v<span app-details="version"></span>
+            </p>
+        </header>
+        
+        <hr>
+
+        <section class="focus_question">
+            <h2 style="text-align:center;" id="question-number">Loading...</h2>
+            <p class="question" id="question-text"></p>
+            <button class="button" onclick="next_question(1.0);" style="background-color: #1b5e20;">Strongly Agree</button> <br>
+            <button class="button" onclick="next_question(0.5);" style="background-color: #4caf50;">Agree</button> <br>
+            <button class="button" onclick="next_question(0);" style="background-color: #333;">Neutral / Unsure</button> <br>
+            <button class="button" onclick="next_question(-0.5);" style="background-color: #f44336;">Disagree</button> <br>
+            <button class="button" onclick="next_question(-1.0);" style="background-color: #b71c1c;">Strongly Disagree</button> <br>
+            <button class="small_button" onclick="prev_question();" id="back_button" style="background-color: #bbbbbb; color: #333;"> << Back</button>
+        </section>
+
+        <hr>
+
+        <section>
+            <button class="small_button" onclick="close_quiz();" style="width:auto;">X Leave the Quiz X</button>
+        </section>
+    </app>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/questions.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+</html>

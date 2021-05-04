@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="x-icon" href="../img/icon.png">
+    <link rel="shortcut icon" type="x-icon" href="../img/icon.png">
+    <title app-details="name"></title>
+    <link href="../css/Montserrat-300-400-700_Roboto-400-700.css" rel="stylesheet">
+    <link href='../css/style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <app>
+        <header>
+            <h1 class="title" app-details="name"></h1>
+            <p>
+                v<span app-details="version"></span>
+            </p>
+        </header>
+        
+        <hr>
+    
+        <section>
+            <h2 style="text-align:center;">Instructions</h2>
+            <p class="question">You will be presented with a series of statements. For each one, click the button with your opinion on it.</p>
+            <button class="button" onclick="location.href='quiz.html?shuffle=false';" style="background-color: #2196f3;">Proceed (Unshuffled) >> </button> <br>
+            <button class="button" onclick="location.href='quiz.html?shuffle=true';" style="background-color: #2196f3;">Proceed (Shuffled) >> </button> <br>
+            <button class="button" onclick="location.href='../index.html';" style="background-color: #f44336;"> << Go Back</button> <br>
+        </section>
+    </app>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>

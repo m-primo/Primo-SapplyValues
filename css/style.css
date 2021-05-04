@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
 html {
     background-color: #bbbbbb;
     padding: 0px;
@@ -5,13 +10,17 @@ html {
 body {
     width: 80%;
     min-height: calc(100vh - 4em);
-    margin: 0 auto;
+    margin: 3em auto;
     padding: 2em;
     background-color: #dddddd;
     border-color: #eeeeee;
     border-left-style: solid;
     border-right-style: solid;
-    border-width: 20px;
+    border-width: 10px;
+    border-radius: 50px;
+}
+header, footer, app, section, sections {
+    display: block;
 }
 p {
     color: #444444;
@@ -51,9 +60,9 @@ p.question {
 h1 {
     color: #222222;
     font-family: 'Montserrat', sans-serif;
-    font-size: 72pt;
+    font-size: 50pt;
     text-align: center;
-    line-height: 72pt;
+    line-height: 50pt;
     margin-top: 0pt;
     margin-bottom: 0pt;
 }
@@ -142,6 +151,8 @@ img.center {
     padding: 8pt;
     width: 50%;
     min-width: 500pt;
+    /* min-width: 350px;
+    max-width: 100%; */
     text-align: center;
     text-decoration: none;
     display: block;
@@ -210,8 +221,32 @@ span.weight-300 {
     margin: 8pt;
     margin-left: auto;
     margin-right: auto;
-    max-width: 50%;
-	min-width: 500pt;
+    max-width: 70%;
+	/* min-width: 500pt; */
+    width: 1850px;
+}
+hr {
+    margin: 30px auto;
+}
+h2 {
+    margin: 20px 0;
+}
+header {
+    margin: auto;
+    text-align: center;
+}
+header p {
+    margin-top: 20px;
+}
+.focus_question {
+    border: 5px solid #ccc;
+    padding: 10px 5px;
+    background-color: #eee;
+    border-radius: 10px;
+}
+.focus_question p.question {
+    background-color: #fff;
+    color: #000;
 }
 
 @media screen and (orientation:portrait) {
@@ -220,9 +255,9 @@ span.weight-300 {
 		border-width: 0px !important;  
 	}
 	
-	.title {
+	/* .title {
 		display: none;
-	}
+	} */
 	
     #svgHeader {
 		display: block !important;

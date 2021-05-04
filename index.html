@@ -1,58 +1,68 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
-    <link href='style.css' rel='stylesheet' type='text/css'>
-    <title>SapplyValues</title>
-    <link rel="icon" type="x-icon" href="icon.png">
-    <link rel="shortcut icon" type="x-icon" href="icon.png">
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="x-icon" href="img/icon.png">
+    <link rel="shortcut icon" type="x-icon" href="img/icon.png">
+    <title app-details="name"></title>
+    <link href="css/Montserrat-300-400-700_Roboto-400-700.css" rel="stylesheet">
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
 </head>
-
 <body>
-	<h1 class="title">SapplyValues</h1>
-    <svg id="svgHeader" style="width: 100%;" viewBox="0 0 112 19">
-		<text x="50%" y="15" class="svgHeader">SapplyValues</text>
-	</svg>
-    <hr>
-    <img src="" id="banner">
-    <button class="button" onclick="location.href='instructions.html';">Click here to start!</button>
+    <app>
+        <header>
+            <h1 class="title" app-details="name"></h1>
+            <p>
+                v<span app-details="version"></span>
+            </p>
+        </header>
+    
+        <hr>
 
-    <h2>What is SapplyValues?</h2>
-        <p>SapplyValues is a political compass test that combines the questions of the <a href="http://sapplypoliticalcompass.com/">Sapply test</a>* with the UI of <a href="https://8values.github.io/">8values</a>. You will be presented by a statement, and then you will answer with your opinion on the statement, from <b>Strongly Agree</b> to <b>Strongly Disagree</b>, with each answer slightly affecting your scores. At the end of the quiz, your answers will be displayed on a political compass.<br /><br />
-        * A few questions have been reworded as I feel some of them were poorly written.</br></br>
-        There are <b><u><span id="numOfQuestions"></span></u></b> questions in the test.</p>
-    <h2>Why use this version?</h2>
-    <p>Both the original and the popular clone version have a number of issues and are very poorly coded. For starters, many users run into NaN errors. This happens when using the keyboard to press enter to go to the next page instead of clicking it. This doesn't apply at all to this version.</br></br>
-    Secondly, the original version does not properly generate an image. It puts an overlay on top of a CSS-defined background image, meaning that if you save the image, it just saves the overlay instead of the whole compass. This is fixed in this version.</br></br>
-    Thirdly, this version supports URL parameters, meaning you can easily share the link to your results and if you lose the image, you can find the results page entry with parameters in your history so you don't have to retake the whole test.</br></br>
-    Finally, the 8values / 9Axes UI is far better (in my opinion anyway). It looks nicer and takes less clicks to answer.</p>
-    <h2>Your questions / results suck!</h2>
-    <p>You will have to complain to the original Sapply creator. I did not make this test, I simply changed the UI.</p>
-	<h2>Privacy notice</h2>
-    <p>At the end of the test, you will be given the option to fill out information about how you describe yourself politcally. There will be 3 options. The first will take you to a small survey and will record your answers to that along with the results. The second will just record your results. The third will not record anything. All information recorded is totally anonymous, and is being used for a research project by the creator of <a href="https://altvalues.github.io/">AltValues</a>.</p>
-    <h2>Legal notice</h2>
-    <p>Copyright (C) 2017-2019 8values</p>
-    <p>Copyright (C) 2020-2021 SapplyValues</p>
-    <p>8values, 9axes, and SapplyValues are licensed under the Expat/MIT license. You can find a copy of the license <a href="LICENSE">here</a> or on the <a href="https://github.com/SapplyValues/SapplyValues.github.io/blob/master/LICENSE">GitHub repo</a>.</p>
+        <img src="img/compass.png" id="banner">
+        <button class="button" onclick="location.href='pages/instructions.html';">Click here to start!</button>
+    
+        <hr>
 
-    <script type="application/javascript" src="questions.js"></script>
-    <script type="text/javascript">
-        document.getElementById("numOfQuestions").innerHTML = questions.length;
-
-        window.onload = function() {
-            var background = new Image();
-            background.onload = function() {
-                var c = document.createElement("canvas");
-                c.width = 1850;
-                c.height = 1300;
-                var ctx = c.getContext("2d");
-                ctx.fillStyle = "#EEEEEE"
-                ctx.fillRect(0, 0, 1850, 1300);
-                ctx.drawImage(background, 0, 0);
-
-                document.getElementById("banner").src = c.toDataURL();
-            }
-            background.src = "./compass.png";
-        }
+        <sections>
+            <section>
+                <h2>About the Quiz</h2>
+                <p>This quiz is a political quiz to identify your political quadrant on the political compass. And this is my version of the quiz, more questions, more accurate.</p>
+            </section>
+            <section>
+                <h2>What is SapplyValues?</h2>
+                <p>
+                    SapplyValues is a political compass test that combines the questions of the <a href="http://sapplypoliticalcompass.com/" target="_blank">Sapply test</a>* with the UI of <a href="https://8values.github.io/" target="_blank">8values</a>. You will be presented by a statement, and then you will answer with your opinion on the statement, from <b>Strongly Agree</b> to <b>Strongly Disagree</b>, with each answer slightly affecting your scores. At the end of the quiz, your answers will be displayed on a political compass.<br /><br />
+                    * A few questions have been reworded as I feel some of them were poorly written.</br></br>
+                    There are <b><u><span id="numOfQuestions"></span></u></b> questions in the test.
+                </p>
+            </section>
+            <section>
+                <h2>What is <span app-details="name"></span>?</h2>
+                <p>
+                    <span app-details="name"></span> is a fork and modified version of <a href="https://sapplyvalues.github.io/" target="_blank">SapplyValues</a>.
+                </p>
+            </section>
+            <section>
+                <h2>Privacy notice</h2>
+                <p>We don't store any result or any information.</p>
+            </section>
+            <section>
+                <h2>Legal notice</h2>
+                <p>Copyright (C) 2017-2019 8values</p>
+                <p>Copyright (C) 2020-2021 SapplyValues</p>
+                <p>Copyright (C) 2021 <span app-details="name"></span></p>
+                <p>8values, 9axes, SapplyValues, and <span app-details="name"></span> are licensed under the Expat/MIT license. You can find a copy of the license <a href="LICENSE" target="_blank">here</a>.</p>
+            </section>
+        </sections>
+    </app>
+    
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/questions.js"></script>
+    <script>
+    document.getElementById("numOfQuestions").innerHTML = questions.length;
     </script>
 </body>
+</html>
