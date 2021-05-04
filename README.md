@@ -3,7 +3,7 @@ SapplyValues is a clone of the Sapply political compass, made to use 8values' UI
 
 
 # Primo SapplyValues
-Primo SapplyValues is a fork of [SapplyValues (SapplyValues/SapplyValues.github.io)](https://github.com/SapplyValues/SapplyValues.github.io)
+Primo SapplyValues is a fork of [SapplyValues (SapplyValues/SapplyValues.github.io)](https://github.com/SapplyValues/SapplyValues.github.io).
 
 
 # About the Quiz
