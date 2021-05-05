@@ -24,11 +24,16 @@
         <section class="focus_question">
             <h2 style="text-align:center;" id="question-number">Loading...</h2>
             <p class="question" id="question-text"></p>
-            <button class="button" onclick="next_question(1.0);" style="background-color: #1b5e20;">Strongly Agree</button> <br>
+            <button class="button" onclick="next_question(1.0);" style="background-color: #1b5e20;">Extremely Agree</button> <br>
+            <button class="button" onclick="next_question(0.75);" style="background-color: #26862d;">Strongly Agree</button> <br>
             <button class="button" onclick="next_question(0.5);" style="background-color: #4caf50;">Agree</button> <br>
+            <button class="button" onclick="next_question(0.25);" style="background-color: #60dd65;">Kinda Agree</button> <br>
             <button class="button" onclick="next_question(0);" style="background-color: #333;">Neutral / Unsure</button> <br>
-            <button class="button" onclick="next_question(-0.5);" style="background-color: #f44336;">Disagree</button> <br>
-            <button class="button" onclick="next_question(-1.0);" style="background-color: #b71c1c;">Strongly Disagree</button> <br>
+            <button class="button" onclick="next_question(-0.25);" style="background-color: #ff675c;">Kinda Disagree</button> <br>
+            <button class="button" onclick="next_question(-0.5);" style="background-color: #df4035;">Disagree</button> <br>
+            <button class="button" onclick="next_question(-0.75);" style="background-color: #b71c1c;">Strongly Disagree</button> <br>
+            <button class="button" onclick="next_question(-1.0);" style="background-color: #741212;">Extremely Disagree</button> <br>
+            <button class="button" onclick="next_question(null);" style="background-color: #6e6e6e;">Don't Know / Don't Understand</button> <br>
             <button class="small_button" onclick="prev_question();" id="back_button" style="background-color: #bbbbbb; color: #333;"> << Back</button>
         </section>
 

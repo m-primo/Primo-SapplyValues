@@ -1,11 +1,11 @@
 // variables
-var answers = new Object();     // Store user's answers
+var answers = new Object(); // Store user's answers
 var qn = 0; // Current question order
 
 
 // Populate questionsObject
 let q_id_pop = 0;
-var questionsObject = new Object();     // Question objects with ID keys
+var questionsObject = new Object(); // Question objects with ID keys
 questions.forEach(populateQO);
 function populateQO(value) {
     questionsObject[q_id_pop] = value;
@@ -72,12 +72,8 @@ function prev_question() {
 
 // RESULTS
 function results() {
-    // get from session storage
-    window.sessionStorage.answers = JSON.stringify(answers);
-
     // Calculate final results
     pct = percentageCalculation();
-    window.sessionStorage.percentages = JSON.stringify(pct);
 
     // prepare arguments
     var args = '?';
@@ -114,7 +110,7 @@ function percentageCalculation() {
     for(const id in answers) {
         // dismiss "don't know"
         if(answers[id] !== null) {
-            for (const effectName in questionsObject[id].effects) {
+            for(const effectName in questionsObject[id].effects) {
                 max[effectName] += Math.abs(questionsObject[id].effects[effectName]);
                 score[effectName] += answers[id]*questionsObject[id].effects[effectName];
             }
