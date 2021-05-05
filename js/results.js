@@ -14,6 +14,13 @@ window.onload = function() {
         ctx.fillRect(0, 0, 1850, 1600);
         ctx.drawImage(background, 0, 0);
 
+        var rect = c.getContext("2d");
+        rect.beginPath();
+        rect.rect(140 + (1000 * (x_axis+10)/20), 1090 - (1000 * (y_axis+10)/20), 125, 125);
+        rect.fillStyle = 'rgb(32,32,32,0.2)';
+        rect.fill();
+        rect.stroke();
+
         var dot = c.getContext("2d");
         dot.beginPath();
         dot.arc(200 + (1000 * (x_axis+10)/20), 1150 - (1000 * (y_axis + 10)/20), 25, 0, 2 * Math.PI);
@@ -29,14 +36,14 @@ window.onload = function() {
         line.strokeStyle = "red";
         line.stroke();
 
-        ctx.font="50px Montserrat";
+        ctx.font="45px Montserrat";
         ctx.textAlign="center";
         ctx.fillStyle="#222222";
-        ctx.fillText("Left / Right Axis (x): " + x_axis, 725, 1375);
-        ctx.fillText("Auth / Lib Axis (y): " + y_axis, 725, 1450);
-        ctx.fillText("Prog / Con Axis (z): " + z_axis, 725, 1525);
+        ctx.fillText("Economic Axis (Right / Left) [x]: " + x_axis, 725, 1350);
+        ctx.fillText("Civil Axis (Auth / Lib) [y]: " + y_axis, 725, 1425);
+        ctx.fillText("Societal Axis (Prog / Con) [z]: " + z_axis, 725, 1500);
         ctx.textAlign="right";
-        ctx.font="45px Montserrat";
+        ctx.font="40px Montserrat";
         ctx.fillText(App.name+' v'+App.version, 1800, 1550);
 
         document.getElementById("banner").src = c.toDataURL();
