@@ -36,8 +36,8 @@ window.onload = function() {
         ctx.fillText("Auth / Lib Axis (y): " + y_axis, 725, 1450);
         ctx.fillText("Prog / Con Axis (z): " + z_axis, 725, 1525);
         ctx.textAlign="right";
-        ctx.font="60px Montserrat";
-        ctx.fillText(App.name+' v'+App.version, 1750, 1560);
+        ctx.font="45px Montserrat";
+        ctx.fillText(App.name+' v'+App.version, 1800, 1550);
 
         document.getElementById("banner").src = c.toDataURL();
     }
