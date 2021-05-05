@@ -4,10 +4,12 @@ var qn = 0; // Current question order
 
 
 // Populate questionsObject
+let q_id_pop = 0;
 var questionsObject = new Object();     // Question objects with ID keys
 questions.forEach(populateQO);
 function populateQO(value) {
-    questionsObject[value['id']] = value;
+    questionsObject[q_id_pop] = value;
+    q_id_pop++;
 }
 
 

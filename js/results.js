@@ -37,7 +37,7 @@ window.onload = function() {
         ctx.fillText("Prog / Con Axis (z): " + z_axis, 725, 1525);
         ctx.textAlign="right";
         ctx.font="60px Montserrat";
-        ctx.fillText(App.name, 1820, 1560);
+        ctx.fillText(App.name+' v'+App.version, 1750, 1560);
 
         document.getElementById("banner").src = c.toDataURL();
     }
