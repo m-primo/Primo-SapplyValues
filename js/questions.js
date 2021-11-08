@@ -30,7 +30,7 @@ const questions = [
         }
     },
     {
-        "question": "Wages are always fair, as employers know best what a worker's labour is worth.",
+        "question": "Wages are always fair, as employers know best what a worker's labor is worth.",
         "effects": {
             "right": 1
         }
@@ -48,7 +48,7 @@ const questions = [
         }
     },
     {
-        "question": "The freer the markets, the freer the people.",
+        "question": "\"The freer the markets, the freer the people.\"",
         "effects": {
             "right": 1
         }
@@ -78,7 +78,7 @@ const questions = [
         }
     },
     {
-        "question": "Organisations and corporations cannot be trusted and need regulating by the government.",
+        "question": "Organizations and corporations cannot be trusted and need to be regulated by the government.",
         "effects": {
             "right": -1
         }
@@ -90,7 +90,7 @@ const questions = [
         }
     },
     {
-        "question": "The current welfare system should be expanded to further combat inequality.",
+        "question": "The current welfare system should be expanded to combat inequality.",
         "effects": {
             "right": -1
         }
@@ -108,7 +108,7 @@ const questions = [
         }
     },
     {
-        "question": "All industry and the bank should be nationalised.",
+        "question": "All the industries and banks should be nationalized.",
         "effects": {
             "right": -1
         }
@@ -150,7 +150,7 @@ const questions = [
         }
     },
     {
-        "question": "Only the government can fairly and effectively regulate organisations.",
+        "question": "Only the government can fairly and effectively regulate organizations.",
         "effects": {
             "auth": 1
         }
@@ -186,7 +186,7 @@ const questions = [
         }
     },
     {
-        "question": "The government should be less involved in the day to day life of its citizens.",
+        "question": "The government should be less involved in the day-to-day life of its citizens.",
         "effects": {
             "auth": -1
         }
@@ -204,7 +204,7 @@ const questions = [
         }
     },
     {
-        "question": "The smaller the government, the freer the people.",
+        "question": "The smaller the government, the freer people.",
         "effects": {
             "auth": -1
         }
@@ -291,7 +291,7 @@ const questions = [
         }
     },
     {
-        "question": "All people - regardless of factors like culture, sexuality, or economically - should be treated equally.",
+        "question": "All people - regardless of factors like culture, sexuality, or economics - should be treated equally.",
         "effects": {
             "auth": -1,
             "right": -1,
@@ -362,7 +362,7 @@ const questions = [
         }
     },
     {
-        "question": "Laws based on cultural values, rather than ethical ones, aren't justice.",
+        "question": "Laws based on cultural values rather than ethical ones aren't justice.",
         "effects": {
             "prog": 1
         }
