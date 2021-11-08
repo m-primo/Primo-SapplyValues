@@ -1,11 +1,11 @@
 // variables
-var answers = new Object(); // Store user's answers
-var qn = 0; // Current question order
+const answers = new Object(); // Store user's answers
+let qn = 0; // Current question order
 
 
 // Populate questionsObject
 let q_id_pop = 0;
-var questionsObject = new Object(); // Question objects with ID keys
+const questionsObject = new Object(); // Question objects with ID keys
 questions.forEach(populateQO);
 function populateQO(value) {
     questionsObject[q_id_pop] = value;
@@ -14,7 +14,7 @@ function populateQO(value) {
 
 
 // Populate & shuffle questionsOrder
-var questionsOrder = Object.keys(questionsObject); //Array of shuffled question IDs
+const questionsOrder = Object.keys(questionsObject); //Array of shuffled question IDs
 const urlParams = new URLSearchParams(window.location.search);
 if(urlParams.get("shuffle") == "true") {
     shuffleArray(questionsOrder);

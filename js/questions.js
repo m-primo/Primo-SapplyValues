@@ -1,4 +1,4 @@
-let questions = [
+const questions = [
     {
         "question": "Our focus should be on individuals rather than group identities.",
         "effects": {
@@ -42,7 +42,7 @@ let questions = [
         }
     },
     {
-        "question": "Communism is an ideal that can never work in practice.",
+        "question": "Communism is a bad idea and can never work in practice.",
         "effects": {
             "right": 1
         }
@@ -259,7 +259,7 @@ let questions = [
         "question": "Churches should be taxed the same way other institutions are taxed.",
         "effects": {
             "right": -0.5,
-            "prog": 1
+            "prog": 0.5
         }
     },
     {
@@ -273,12 +273,6 @@ let questions = [
         "question": "Sex outside marriage is immoral.",
         "effects": {
             "auth": 0.5,
-            "prog": -1
-        }
-    },
-    {
-        "question": "My religious values should be spread as much as possible.",
-        "effects": {
             "prog": -1
         }
     },
@@ -377,6 +371,12 @@ let questions = [
         "question": "Climate change is currently one of the greatest threats to our way of life.",
         "effects": {
             "prog": 1
+        }
+    },
+    {
+        "question": "My religious values should be spread as much as possible.",
+        "effects": {
+            "prog": -0.5
         }
     },
     {
